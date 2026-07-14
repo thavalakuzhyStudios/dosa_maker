@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bp8jgf4n3rh3j"
+path="res://.godot/imported/patram_maav_mask.svg-a08417b384b070e94517334458c3438b.res"
+
+[deps]
+
+source_file="res://patram_maav_mask.svg"
+dest_files=["res://.godot/imported/patram_maav_mask.svg-a08417b384b070e94517334458c3438b.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

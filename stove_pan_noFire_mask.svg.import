@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ed8trr34fqrw"
+path="res://.godot/imported/stove_pan_noFire_mask.svg-b9270102479010cae80e4349b6039110.res"
+
+[deps]
+
+source_file="res://stove_pan_noFire_mask.svg"
+dest_files=["res://.godot/imported/stove_pan_noFire_mask.svg-b9270102479010cae80e4349b6039110.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

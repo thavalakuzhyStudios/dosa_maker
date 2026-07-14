@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://b5xnan4nn00ep"]
 
 [ext_resource type="Texture2D" uid="uid://bskc3go0cr66x" path="res://kitchen_bkg.svg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://4a3j51ebswf1" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cbxhs16ecedf7" path="res://ladle_empty.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://crk634s8giigm" path="res://hand.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://ct5vrqpqhr0qb" path="res://patram.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cai5fg4qqubf5" path="res://stove.tscn" id="6_7mycd"]
 
 [node name="main" type="Node2D" unique_id=880278239]
+script = ExtResource("1_lquwl")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=812629021]
 offset_right = 1149.0
@@ -19,6 +23,20 @@ offset_right = 262.0
 offset_bottom = 427.6766
 
 [node name="hand" parent="." unique_id=1852639783 instance=ExtResource("3_h2yge")]
+visible = false
 position = Vector2(861.00006, 534)
 
+[node name="patram" parent="." unique_id=1628078471 instance=ExtResource("4_1bvp3")]
+offset_left = 144.0
+offset_top = -2.0
+offset_right = 828.0
+offset_bottom = 540.0
+
+[node name="stove" parent="." unique_id=1581156086 instance=ExtResource("6_7mycd")]
+offset_left = 7.0
+offset_top = -71.0
+offset_right = 1130.0
+offset_bottom = 723.0
+
 [connection signal="empty_ladle_press" from="Ladle_empty" to="hand" method="ladle_collected"]
+[connection signal="patram_press" from="patram" to="hand" method="maav_collected"]

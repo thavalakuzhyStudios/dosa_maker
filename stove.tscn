@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cai5fg4qqubf5"]
+
+[ext_resource type="Texture2D" uid="uid://cb0c82o8yg43v" path="res://stove_pan_noFire.svg" id="1_a3bkh"]
+[ext_resource type="BitMap" uid="uid://ed8trr34fqrw" path="res://stove_pan_noFire_mask.svg" id="2_eim6s"]
+[ext_resource type="Script" uid="uid://51c5hjg13y4q" path="res://stove.gd" id="3_a3bkh"]
+
+[node name="stove" type="TextureButton" unique_id=1581156086]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_a3bkh")
+texture_click_mask = ExtResource("2_eim6s")
+script = ExtResource("3_a3bkh")
+
+[node name="ignition" type="Button" parent="." unique_id=1643250268]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 421.0
+offset_right = 535.0
+offset_bottom = 451.0
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="button_up" from="ignition" to="." method="_on_ignition_button_up"]
