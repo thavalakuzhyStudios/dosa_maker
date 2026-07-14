@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cbxhs16ecedf7"]
+
+[ext_resource type="Texture2D" uid="uid://de7wmd7dq6wn7" path="res://ladle_empty.svg" id="1_pdvpk"]
+[ext_resource type="BitMap" uid="uid://bi1iaio0fswc1" path="res://ladle_empty_mask.svg" id="2_2y0b4"]
+[ext_resource type="Script" uid="uid://devrfn317effu" path="res://ladle_empty.gd" id="2_du8y4"]
+
+[node name="Ladle_empty" type="TextureButton" unique_id=713695354]
+offset_right = 165.0
+offset_bottom = 170.6766
+texture_normal = ExtResource("1_pdvpk")
+texture_click_mask = ExtResource("2_2y0b4")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_du8y4")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

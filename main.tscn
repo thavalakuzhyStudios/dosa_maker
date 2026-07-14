@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b5xnan4nn00ep"]
+
+[ext_resource type="Texture2D" uid="uid://bskc3go0cr66x" path="res://kitchen_bkg.svg" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cbxhs16ecedf7" path="res://ladle_empty.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://crk634s8giigm" path="res://hand.tscn" id="3_h2yge"]
+
+[node name="main" type="Node2D" unique_id=880278239]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=812629021]
+offset_right = 1149.0
+offset_bottom = 643.0
+texture = ExtResource("1_ig7tw")
+expand_mode = 1
+
+[node name="Ladle_empty" parent="." unique_id=713695354 instance=ExtResource("2_0xm2m")]
+offset_left = 97.0
+offset_top = 257.0
+offset_right = 262.0
+offset_bottom = 427.6766
+
+[node name="hand" parent="." unique_id=1852639783 instance=ExtResource("3_h2yge")]
+position = Vector2(861.00006, 534)
+
+[connection signal="empty_ladle_press" from="Ladle_empty" to="hand" method="ladle_collected"]
