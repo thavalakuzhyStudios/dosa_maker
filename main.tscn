@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bskc3go0cr66x" path="res://kitchen_bkg.svg" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://4a3j51ebswf1" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cbxhs16ecedf7" path="res://ladle_empty.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dpkv75lu8xcp6" path="res://cooked_dosa.tscn" id="2_efxa6"]
 [ext_resource type="PackedScene" uid="uid://crk634s8giigm" path="res://hand.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://ct5vrqpqhr0qb" path="res://patram.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cai5fg4qqubf5" path="res://stove.tscn" id="6_7mycd"]
@@ -13,6 +14,7 @@
 
 [node name="main" type="Node2D" unique_id=880278239]
 script = ExtResource("1_lquwl")
+cooked_dosa_scene = ExtResource("2_efxa6")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=812629021]
 offset_right = 1149.0
@@ -50,12 +52,18 @@ scale = Vector2(1, 1)
 position = Vector2(868, 327)
 texture = ExtResource("8_kek77")
 
-[node name="cooked_dosa" type="Sprite2D" parent="." unique_id=1613702356]
+[node name="OLD_cooked_dosa" type="Sprite2D" parent="." unique_id=1613702356]
 visible = false
 position = Vector2(870, 320)
 texture = ExtResource("9_4c57u")
 
 [node name="hud" parent="." unique_id=1280751384 instance=ExtResource("10_4c57u")]
+
+[node name="cooked_dosa_loc" type="Marker2D" parent="." unique_id=2011169308]
+position = Vector2(874, 322)
+
+[node name="cooked_dosa" parent="." unique_id=586631534 instance=ExtResource("2_efxa6")]
+visible = false
 
 [connection signal="empty_ladle_press" from="Ladle_empty" to="." method="ladle_picked_up"]
 [connection signal="patram_press" from="patram" to="." method="maav_picked_up"]

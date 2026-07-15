@@ -9,7 +9,6 @@ texture = ExtResource("1_hlurn")
 script = ExtResource("2_m0aby")
 
 [node name="cookTimer" type="Timer" parent="." unique_id=810894581]
-wait_time = 5.0
 one_shot = true
 
 [connection signal="timeout" from="cookTimer" to="." method="dosa_oneside_cooked"]

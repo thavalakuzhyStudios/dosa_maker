@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dpkv75lu8xcp6"]
+
+[ext_resource type="Texture2D" uid="uid://cx0morky4jaj1" path="res://maav_cooked.svg" id="1_rtqdk"]
+
+[node name="cooked_dosa" type="Sprite2D" unique_id=586631534]
+texture = ExtResource("1_rtqdk")
