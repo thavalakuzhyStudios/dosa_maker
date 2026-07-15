@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://boacvvyfwy4kx"]
+
+[ext_resource type="Texture2D" uid="uid://ce6psxpkc12lt" path="res://maav_ball.svg" id="1_hlurn"]
+[ext_resource type="Script" uid="uid://bq662lqrek3am" path="res://dosa.gd" id="2_m0aby"]
+
+[node name="dosa" type="Sprite2D" unique_id=1164584137]
+scale = Vector2(2, 2)
+texture = ExtResource("1_hlurn")
+script = ExtResource("2_m0aby")
+
+[node name="cookTimer" type="Timer" parent="." unique_id=810894581]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="cookTimer" to="." method="dosa_oneside_cooked"]

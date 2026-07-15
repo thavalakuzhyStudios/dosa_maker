@@ -7,9 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://ct5vrqpqhr0qb" path="res://patram.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cai5fg4qqubf5" path="res://stove.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://boacvvyfwy4kx" path="res://dosa.tscn" id="7_272bh"]
-[ext_resource type="Texture2D" uid="uid://cjpjftb55pjme" path="res://plate_for_dosa.svg" id="8_kek77"]
-[ext_resource type="Texture2D" uid="uid://cx0morky4jaj1" path="res://maav_cooked.svg" id="9_4c57u"]
-[ext_resource type="PackedScene" uid="uid://hwl0dhe6yo5e" path="res://hud.tscn" id="10_4c57u"]
 
 [node name="main" type="Node2D" unique_id=880278239]
 script = ExtResource("1_lquwl")
@@ -46,19 +43,7 @@ visible = false
 position = Vector2(516, 275)
 scale = Vector2(1, 1)
 
-[node name="plate_for_dosa" type="Sprite2D" parent="." unique_id=239118716]
-position = Vector2(868, 327)
-texture = ExtResource("8_kek77")
-
-[node name="cooked_dosa" type="Sprite2D" parent="." unique_id=1613702356]
-visible = false
-position = Vector2(870, 320)
-texture = ExtResource("9_4c57u")
-
-[node name="hud" parent="." unique_id=1280751384 instance=ExtResource("10_4c57u")]
-
 [connection signal="empty_ladle_press" from="Ladle_empty" to="." method="ladle_picked_up"]
 [connection signal="patram_press" from="patram" to="." method="maav_picked_up"]
 [connection signal="stove_igni_press" from="stove" to="." method="stove_turned_on"]
 [connection signal="stove_press" from="stove" to="." method="stove_pressed"]
-[connection signal="dosa_cooked" from="dosa" to="." method="dosa_cooked"]

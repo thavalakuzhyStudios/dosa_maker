@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://hwl0dhe6yo5e"]
+
+[node name="hud" type="CanvasLayer" unique_id=1280751384]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1829252530]
+offset_left = 1005.0
+offset_top = 206.0
+offset_right = 1134.0
+offset_bottom = 271.0
+rotation = 0.14946996
+color = Color(0, 0, 0, 1)
+
+[node name="dosa_counter" type="Label" parent="." unique_id=1798910112]
+offset_left = 1067.0
+offset_top = 239.0
+offset_right = 1107.0
+offset_bottom = 262.0
+rotation = 0.14946996
+text = "0"
+
+[node name="text_1" type="Label" parent="." unique_id=1363211228]
+offset_left = 1014.0
+offset_top = 211.0
+offset_right = 1129.0
+offset_bottom = 240.0
+rotation = 0.14946996
+text = "Dosa counter"
